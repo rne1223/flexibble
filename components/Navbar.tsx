@@ -5,7 +5,7 @@ import { NavLinks } from '@/constants';
 import AuthProviders from './AuthProviders';
 
 const Navbar = () => {
-  const session = {};
+  const session = null; 
   return (
     <nav className='flexBetween navbar'>
       <div className='flex-1 flexStart gap-10'>
@@ -16,14 +16,15 @@ const Navbar = () => {
           height={43}
           alt='Flexible'
           />
+        </Link>
+
           <ul className='xl:flex hidden text-small gap-7'>
             {NavLinks.map(link => (
-              <Link href={link.href} key={link.key}>
-                {link.text}
-              </Link>
+                <Link href={link.href} key={link.key}>
+                  {link.text}
+                </Link>
             ))}
           </ul>
-        </Link>
       </div>
 
       <div className='flexCenter gap-4'>
@@ -38,8 +39,6 @@ const Navbar = () => {
             <AuthProviders />
           )}
       </div>
-
-
     </nav>
   )
 }
