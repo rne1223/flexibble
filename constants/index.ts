@@ -24,6 +24,12 @@ export const categoryFilters = [
 
 export const footerLinks = [
   {
+    title: 'Test',
+    links: [
+      'Go Pro!',
+    ],
+  },
+  {
     title: 'For developers',
     links: [
       'Go Pro!',
